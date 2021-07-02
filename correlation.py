@@ -56,12 +56,14 @@ def compute_correlations(fn):
 def diagnose(fn):
     d=compute_correlations(fn)
     cal=d.values()
-    for key,values in d:
-        if values==max(cal):
+    for key,value in d.items():
+        if value==max(cal):
             a=key
-        if values==min(cal):
+        if value==min(cal):
             b=key
-    return a,b
+    print(a,b)
+
+diagnose('journal.json')
 
 
 
