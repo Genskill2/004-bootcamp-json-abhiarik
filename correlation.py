@@ -54,9 +54,14 @@ def compute_correlations(fn):
     return d
 
 def diagnose(fn):
-    cal=compute_correlations(fn).values()
-    return max(cal),min(cal)
-
+    d=compute_correlations(fn)
+    cal=d.values()
+    for key,values in d:
+        if values==max(cal):
+            a=key
+        if values==min(cal):
+            b=key
+    return a,b
 
 
 
