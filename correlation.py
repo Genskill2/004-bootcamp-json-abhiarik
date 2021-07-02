@@ -61,9 +61,9 @@ def diagnose(fn):
             a=key
         if value==min(cal):
             b=key
-    print(a,b)
+    return a,b
 
-diagnose('journal.json')
+
 
 
 
